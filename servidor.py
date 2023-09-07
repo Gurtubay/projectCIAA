@@ -14,10 +14,10 @@ def formulario():
 	return render_template('pagina1.html')
 
 #Envio de datos a traves de JSON
-@servidorWeb.route('/modelo',methods=['POST'])
-def modeloPrediccion():
+@servidorWeb.route('/modeloForm',methods=['POST'])
+def modeloForm():
 	#Procesar los datos de entrada
-	contenido =request.json
+	contenido =request.form
 	print(contenido)
 	datosEntrada=np.array([0.88,0,2.6,0.098,25,67,0.9968,1,0.4,
 		contenido['pH'],
