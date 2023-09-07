@@ -4,7 +4,7 @@ from joblib import load
 import os
 
 #Cargar el modelo
-dt=load('dt_1.joblib')
+dt=load('dt1.joblib')
 
 #Generar el servidor(Back-End)
 servidorWeb=Flask(__name__)
@@ -19,13 +19,15 @@ def modeloPrediccion():
 	#Procesar los datos de entrada
 	contenido =request.json
 	print(contenido)
-	datosEntrada=np.array([
+	datosEntrada=np.array([0.88,0,2.6,0.098,25,67,0.9968,
 		contenido['pH'],
-		contenido['sulfatos'],
+		contenido['sulphates'],
 		contenido['alcohol']
 	])
-	return jsonify({'resultado':'Hola'})
-	
+	#utilizar el modelo
+	resultado = dt.predict(datosEntrada.reshape(1,-1))
+	return jsonify({'resultado':str(resultado[0])})
+
 
 if __name__ == '_main_':
 	servidorWeb.run(debug=False,host='0.0.0.0',port='8080')
