@@ -7,7 +7,7 @@ import os
 dt=load('dt_1.joblib')
 
 #Generar el servidor(Back-End)
-servidorWeb=Flask(_name_)
+servidorWeb=Flask(__name__)
 
 @servidorWeb.route("/holamundo",methods=['GET'])
 def formulario():
@@ -27,5 +27,5 @@ def modeloPrediccion():
 	return jsonify({'resultado':'Hola'})
 	
 
-if _name_ == '_main_':
+if __name__ == '_main_':
 	servidorWeb.run(debug=False,host='0.0.0.0',port='8080')
