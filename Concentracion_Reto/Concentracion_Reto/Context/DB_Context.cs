@@ -21,6 +21,7 @@ namespace Concentracion_Reto.Context
             optionsBuilder.UseSqlServer(this.configuration.GetConnectionString("MiConexion"));
         }
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Propiedad> Propiedades { get; set; }
     }
 
     [Table("Usuario")]
@@ -38,6 +39,17 @@ namespace Concentracion_Reto.Context
 
     }
 
+    [Table("Propiedad")]
+    public class Propiedad
+    {
+        [Key]
+        public int? propiedadId { get; set; }
+        public int usuarioId { get; set; }
+        public string titulo { get; set; }
+        public string descripcion { get; set; }
+        public float precio { get; set; }
+        public string ubicacion { get; set; }
+    }
 
 
 }

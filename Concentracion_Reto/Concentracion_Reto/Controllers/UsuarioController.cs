@@ -22,7 +22,8 @@ namespace Concentracion_Reto.Controllers
             var nuevoUsuario = new dtoUsuario();
             nuevoUsuario.usuario = usuario.Usuario;
             nuevoUsuario.contrasena = usuario.Contrasena;
-            nuevoUsuario.nombres= usuario.Nombre;
+            nuevoUsuario.apellidos = usuario.Apellidos;
+            nuevoUsuario.nombres= usuario.Nombres;
             nuevoUsuario.correo= usuario.CorreoElectronico;
             nuevoUsuario.telefono= usuario.Telefono;
             nuevoUsuario.tipo= usuario.Tipo;
