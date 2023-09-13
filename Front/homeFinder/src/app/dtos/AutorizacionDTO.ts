@@ -4,6 +4,6 @@ export interface AutorizacionRequest{
 }
 export interface AutorizacionResponse{
     usuario:string,
-    folio:Int8Array,
+    folio:Number,
     Error:string
 }
