@@ -19,11 +19,33 @@ def modeloForm():
 	#Procesar los datos de entrada
 	contenido =request.form
 	print(contenido)
-	datosEntrada=np.array([0.88,0,2.6,0.098,25,67,0.9968,1,0.4,
-		contenido['pH'],
-		contenido['sulphates'],
-		contenido['alcohol']
-	])
+	# datosEntrada=np.array([0.88,0,2.6,0.098,25,67,0.9968,1,0.4,
+	# 	contenido['pH'],
+	# 	contenido['sulphates'],
+	# 	contenido['alcohol']
+	# ])
+	datosEntrada = np.array([
+    contenido['TipoVivienda'],
+    contenido['CalleConectadaEnPies'],
+    contenido['AreaLote'],
+    contenido['CalidadMateriales'],
+    contenido['CondicionCasa'],
+    contenido['AñoConstruccion'],
+    contenido['AñoRemodelado'],
+    contenido['AreaRevestimiento'],
+    contenido['AreaSotano1'],
+    contenido['AreaSotano2'],
+    contenido['AreaSotanoSinTerminar'],
+    contenido['AreaSotanoTotal'],
+    contenido['AreaPrimerPiso'],
+    contenido['AreaSegundoPiso'],
+    contenido['AreaTerminadaBajaCalidad'],
+    contenido['AreaViviendaSobreSuelo'],
+    contenido['BañosCompletosSotano'],
+    contenido['BañosMediosSotano'],
+    contenido['BañosCompletosSobreSuelo'],
+    contenido['BañosMediosSobreSuelo']
+])
 	#utilizar el modelo
 	resultado = dt.predict(datosEntrada.reshape(1,-1))
 	return jsonify({'resultado':str(resultado[0])})
