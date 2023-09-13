@@ -25,26 +25,26 @@ def modeloForm():
 	# 	contenido['alcohol']
 	# ])
 	datosEntrada = np.array([
-    contenido['TipoVivienda'],
-    contenido['CalleConectadaEnPies'],
-    contenido['AreaLote'],
-    contenido['CalidadMateriales'],
-    contenido['CondicionCasa'],
-    contenido['AñoConstruccion'],
-    contenido['AñoRemodelado'],
-    contenido['AreaRevestimiento'],
-    contenido['AreaSotano1'],
-    contenido['AreaSotano2'],
-    contenido['AreaSotanoSinTerminar'],
-    contenido['AreaSotanoTotal'],
-    contenido['AreaPrimerPiso'],
-    contenido['AreaSegundoPiso'],
-    contenido['AreaTerminadaBajaCalidad'],
-    contenido['AreaViviendaSobreSuelo'],
-    contenido['BañosCompletosSotano'],
-    contenido['BañosMediosSotano'],
-    contenido['BañosCompletosSobreSuelo'],
-    contenido['BañosMediosSobreSuelo']
+    (contenido['TipoVivienda']-56.897)/(42.300),
+    (contenido['CalleConectadaEnPies']-57.623)/(34.6643),
+    (contenido['AreaLote']-10516.828)/( 9981.26),
+    (contenido['CalidadMateriales']-6.0993)/(1.3829),
+    (contenido['CondicionCasa']- 5.575)/(1.112),
+    (contenido['AñoConstruccion']-1971.267)/( 30.202),
+    (contenido['AñoRemodelado']- 1984.865)/(20.645),
+    (contenido['AreaRevestimiento']-103.117)/( 180.731),
+    (contenido['AreaSotano1']- 443.639)/( 456.098),
+    (contenido['AreaSotano2']- 46.549)/(161.3192),
+    (contenido['AreaSotanoSinTerminar']-567.2404)/( 441.866),
+    (contenido['AreaSotanoTotal']-1057.429)/( 438.7053),
+    (contenido['AreaPrimerPiso']-1162.626)/(386.587),
+    (contenido['AreaSegundoPiso']-346.992)/( 436.5284),
+    (contenido['AreaTerminadaBajaCalidad']-5.84452)/(48.6230),
+    (contenido['AreaViviendaSobreSuelo']-1515.463)/( 525.480),
+    (contenido['BañosCompletosSotano']-0.4253)/(0.5189),
+    (contenido['BañosMediosSotano']-0.05753)/( 0.2387),
+    (contenido['BañosCompletosSobreSuelo']- 1.565)/( 0.55091),
+    (contenido['BañosMediosSobreSuelo']-0.3828)/( 0.5028)
 ])
 	#utilizar el modelo
 	resultado = dt.predict(datosEntrada.reshape(1,-1))
