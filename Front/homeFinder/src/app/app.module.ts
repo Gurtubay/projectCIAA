@@ -11,6 +11,11 @@ import { PublicarComponent } from './Components/publicar/publicar.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { SharedModule } from './Components/shared/shared.module';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
+import { Autorizacion } from './Service/Autorization.service';
+import { Registro } from './Service/Registro.service';
 
 @NgModule({
   declarations: [
@@ -23,9 +28,14 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule,
+    NoopAnimationsModule
   ],
-  providers: [],
+  providers: [
+    Autorizacion,
+    Registro
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

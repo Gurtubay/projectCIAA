@@ -10,16 +10,17 @@ import { AutorizacionRequest, AutorizacionResponse } from "../dtos/AutorizacionD
 export class Autorizacion{
     constructor(private http:HttpClient){}
 
-    private firmantesURL=enviroment.apiFirmantesURL;
+    private URL=enviroment.apiURL;
 
     public getTokenAuthentication(auth :AutorizacionRequest):Observable<AutorizacionResponse>{
         var reqHeader = new HttpHeaders({
             'Content-Type': 'application/json',
          });
-        return this.http.post<AutorizacionResponse>(`${this.firmantesURL}${enviroment.authAPI}`,
+        return this.http.post<AutorizacionResponse>(`${this.URL}${enviroment.authAPI}`,
         JSON.stringify(auth),{headers:reqHeader})
         .pipe(map((res:AutorizacionResponse)=>{
             console.log(res)
+            debugger
             return res;
         }));
     }

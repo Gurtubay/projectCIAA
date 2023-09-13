@@ -1,4 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit,HostListener } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
+import { MatDialog, MatDialogRef,MAT_DIALOG_DATA } from '@angular/material/dialog';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { Platform } from '@angular/cdk/platform';
+import { AutorizacionRequest } from 'src/app/dtos/AutorizacionDTO';
+import { Autorizacion } from 'src/app/Service/Autorization.service';
+
 
 @Component({
   selector: 'app-login',

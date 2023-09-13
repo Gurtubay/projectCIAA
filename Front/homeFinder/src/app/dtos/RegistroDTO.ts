@@ -1,12 +1,12 @@
 export interface RegistroRequest{
     Usuario:string,
     Contrasena:string,
-    Nombre:string,
+    Nombres:string,
+    Apellidos:string
     CorreoElectronico:string,
     Telefono:string,
-    RazonSocial:string,
-    Cargo:string
+    Tipo:string
 }
 export interface RegistroResponse{
-    message:string,
+    message:string
 }
