@@ -16,6 +16,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { Autorizacion } from './Service/Autorization.service';
 import { Registro } from './Service/Registro.service';
+import { Publicar } from './Service/Propiedad.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { Registro } from './Service/Registro.service';
   ],
   providers: [
     Autorizacion,
-    Registro
+    Registro,
+    Publicar
   ],
   bootstrap: [AppComponent]
 })

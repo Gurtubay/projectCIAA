@@ -31,6 +31,129 @@
             <mat-label>Ubicación</mat-label>
             <input matInput formControlName="ubicacion" type="text" placeholder="Ubicación">
           </mat-form-field>
+
+          <!-- Tipo Vivienda -->
+        <mat-form-field appearance="outline">
+            <mat-label>Tipo Vivienda</mat-label>
+            <input matInput formControlName="tipoVivienda" type="number" placeholder="Tipo Vivienda">
+          </mat-form-field>
+  
+          <!-- Calle Conectada En Pies -->
+          <mat-form-field appearance="outline">
+            <mat-label>Calle Conectada En Pies</mat-label>
+            <input matInput formControlName="calleConectada" type="number" step="0.1" placeholder="Calle Conectada En Pies">
+          </mat-form-field>
+  
+          <!-- Area Lote -->
+          <mat-form-field appearance="outline">
+            <mat-label>Area Lote</mat-label>
+            <input matInput formControlName="areaLote" type="number" placeholder="Area Lote">
+          </mat-form-field>
+  
+          <!-- Calidad Materiales -->
+          <mat-form-field appearance="outline">
+            <mat-label>Calidad Materiales</mat-label>
+            <input matInput formControlName="calidadMateriales" type="number" placeholder="Calidad Materiales">
+          </mat-form-field>
+  
+          <!-- Condicion Casa -->
+          <mat-form-field appearance="outline">
+            <mat-label>Condicion Casa </mat-label>
+            <input matInput formControlName="condicionCasa " type="number" placeholder="Condicion Casa">
+          </mat-form-field>
+
+          <!-- Año Construccion  -->
+          <mat-form-field appearance="outline">
+            <mat-label>Año Construccion</mat-label>
+            <input matInput formControlName="añoConstruccion" type="number" placeholder="Calidad Materiales">
+          </mat-form-field>
+
+          <!-- Año Remodelado  -->
+          <mat-form-field appearance="outline">
+            <mat-label>Año Remodelado </mat-label>
+            <input matInput formControlName="añoRemodelado " type="number" placeholder="Año Remodelado ">
+          </mat-form-field>
+  
+          <!-- Area Sotano 1   -->
+          <mat-form-field appearance="outline">
+            <mat-label>Area Sotano 1 </mat-label>
+            <input matInput formControlName="areaSotano1 " type="number" placeholder="Area Sotano1  ">
+          </mat-form-field>
+
+          <!-- Area Sotano 2   -->
+          <mat-form-field appearance="outline">
+            <mat-label>Area Sotano 2 </mat-label>
+            <input matInput formControlName="areaSotano2 " type="number" placeholder="Area Sotano 2 ">
+          </mat-form-field>
+
+          <!-- Area Sotano Sin Terminar  -->
+          <mat-form-field appearance="outline">
+            <mat-label>Area Sotano Sin Terminar </mat-label>
+            <input matInput formControlName="areaSotanoSinTerminar  " type="number" placeholder="Area Sotano Sin Terminar ">
+          </mat-form-field>
+  
+          <!-- Area Sotano Total  -->
+          <mat-form-field appearance="outline">
+            <mat-label>Area Sotano Total  </mat-label>
+            <input matInput formControlName="areaSotanoTotal  " type="number" placeholder="Area Sotano Total">
+          </mat-form-field>
+
+          <!-- Area Primer Piso  -->
+          <mat-form-field appearance="outline">
+            <mat-label>Area Primer Piso</mat-label>
+            <input matInput formControlName="areaPrimerPiso  " type="number" placeholder="Area Primer Piso">
+          </mat-form-field>
+
+          <!-- Area Segundo Piso -->
+          <mat-form-field appearance="outline">
+            <mat-label>Area Segundo Piso</mat-label>
+            <input matInput formControlName="areaSegundoPiso " type="number" placeholder="Area Segundo Piso">
+          </mat-form-field>
+  
+          <!--Area Terminada Baja Calidad -->
+          <mat-form-field appearance="outline">
+            <mat-label>Area Terminada Baja Calidad </mat-label>
+            <input matInput formControlName="areaTerminadaBajaCalidad " type="number" placeholder="Area Terminada Baja Calidad ">
+          </mat-form-field>
+
+          <!-- Area Vivienda Sobre Suelo -->
+          <mat-form-field appearance="outline">
+            <mat-label>Area Vivienda Sobre Suelo</mat-label>
+            <input matInput formControlName="areaViviendaSobreSuelo " type="number" placeholder="Area Vivienda Sobre Suelo">
+          </mat-form-field>
+
+          <!-- Año Remodelado  -->
+          <mat-form-field appearance="outline">
+            <mat-label>Año Remodelado </mat-label>
+            <input matInput formControlName="añoRemodelado " type="number" placeholder="Año Remodelado ">
+          </mat-form-field>
+  
+          <!-- Baños Completos Sotano -->
+          <mat-form-field appearance="outline">
+            <mat-label>Baños Completos Sotano </mat-label>
+            <input matInput formControlName="bañosCompletosSotano  " type="number" placeholder="Baños Completos Sotano ">
+          </mat-form-field>
+
+          <!-- Baños Medios Sotano -->
+          <mat-form-field appearance="outline">
+            <mat-label>Baños Medios Sotano  </mat-label>
+            <input matInput formControlName="bañosMediosSotano  " type="number" placeholder="Baños Medios Sotano ">
+          </mat-form-field>
+
+          <!-- Baños Completos Sobre Suelo -->
+          <mat-form-field appearance="outline">
+            <mat-label>Baños Completos Sobre Suelo</mat-label>
+            <input matInput formControlName="bañosCompletosSobreSuelo" type="number" placeholder="Baños Completos Sobre Suelo">
+          </mat-form-field>
+
+          <!-- Baños Medios Sobre Suelo -->
+          <mat-form-field appearance="outline">
+            <mat-label>Baños Medios Sobre Suelo</mat-label>
+            <input matInput formControlName="bañosMediosSobreSuelo" type="number" placeholder="Baños Medios Sobre Suelo">
+          </mat-form-field>
+
+
+          
   
           <!-- Submit Button -->
           <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid || loading" class="registrar-navlink button">Registrar</button>

@@ -26,6 +26,26 @@ export class PublicarComponent implements OnInit {
         descripcion: ['', Validators.required],
         precio: ['', Validators.required],
         ubicacion: ['', Validators.required],
+        tipoVivienda:['', Validators.required],
+        calleConectadaEnPies: ['', Validators.required],
+        areaLote : ['', Validators.required],
+        calidadMateriales : ['', Validators.required],
+        condicionCasa : ['', Validators.required],
+        añoConstruccion : ['', Validators.required],
+        añoRemodelado : ['', Validators.required],
+        areaRevestimiento : ['', Validators.required],
+        areaSotano1 : ['', Validators.required],
+        areaSotano2 : ['', Validators.required],
+        areaSotanoSinTerminar : ['', Validators.required],
+        areaSotanoTotal : ['', Validators.required],
+        areaPrimerPiso : ['', Validators.required],
+        areaSegundoPiso : ['', Validators.required],
+        areaTerminadaBajaCalidad : ['', Validators.required],
+        areaViviendaSobreSuelo : ['', Validators.required],
+        bañosCompletosSotano : ['', Validators.required],
+        bañosMediosSotano : ['', Validators.required],
+        bañosCompletosSobreSuelo : ['', Validators.required],
+        bañosMediosSobreSuelo: ['', Validators.required]
       });
       this.loading=false;
     }
@@ -40,7 +60,8 @@ export class PublicarComponent implements OnInit {
         titulo: this.form.value.titulo,
         descripcion: this.form.value.descripcion,
         precio: this.form.value.precio,
-        ubicacion: this.form.value.ubicacion
+        ubicacion: this.form.value.ubicacion,
+
       }
       
       debugger
