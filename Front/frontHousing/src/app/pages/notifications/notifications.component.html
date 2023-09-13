@@ -1,0 +1,98 @@
+<div class="notifications-container">
+  <app-sidebar rootClassName="sidebar-root-class-name"></app-sidebar>
+  <div class="notifications-container1">
+    <svg viewBox="0 0 1024 1024" class="notifications-icon">
+      <path
+        d="M406 598q80 0 136-56t56-136-56-136-136-56-136 56-56 136 56 136 136 56zM662 598l212 212-64 64-212-212v-34l-12-12q-76 66-180 66-116 0-197-80t-81-196 81-197 197-81 196 81 80 197q0 42-20 95t-46 85l12 12h34z"
+      ></path></svg
+    ><svg viewBox="0 0 1024 1024" class="notifications-icon2">
+      <path
+        d="M521.143 969.143c0-5.143-4-9.143-9.143-9.143-45.143 0-82.286-37.143-82.286-82.286 0-5.143-4-9.143-9.143-9.143s-9.143 4-9.143 9.143c0 55.429 45.143 100.571 100.571 100.571 5.143 0 9.143-4 9.143-9.143zM987.429 804.571c0 40-33.143 73.143-73.143 73.143h-256c0 80.571-65.714 146.286-146.286 146.286s-146.286-65.714-146.286-146.286h-256c-40 0-73.143-33.143-73.143-73.143 84.571-71.429 182.857-199.429 182.857-475.429 0-109.714 90.857-229.714 242.286-252-2.857-6.857-4.571-14.286-4.571-22.286 0-30.286 24.571-54.857 54.857-54.857s54.857 24.571 54.857 54.857c0 8-1.714 15.429-4.571 22.286 151.429 22.286 242.286 142.286 242.286 252 0 276 98.286 404 182.857 475.429z"
+      ></path>
+    </svg>
+  </div>
+  <div class="notifications-container2">
+    <h1 class="notifications-text">New</h1>
+    <div class="notifications-container3">
+      <h1 class="notifications-text01">On Property - 3600</h1>
+      <h1 class="notifications-text02">1 hour ago</h1>
+      <h1 class="notifications-text03">Great Property, thank you</h1>
+      <h1 class="notifications-text04">Comment</h1>
+      <h1 class="notifications-text05">Like</h1>
+      <h1 class="notifications-text06">New property listed</h1>
+    </div>
+    <div class="notifications-container4">
+      <h1 class="notifications-text07">On Property - 3600</h1>
+      <h1 class="notifications-text08">1 hour ago</h1>
+      <h1 class="notifications-text09">Great Property, thank you</h1>
+      <h1 class="notifications-text10">Comment</h1>
+      <h1 class="notifications-text11">Like</h1>
+      <h1 class="notifications-text12">Interested Buyer</h1>
+    </div>
+  </div>
+  <div class="notifications-container5">
+    <h1 class="notifications-text13">Comments</h1>
+    <h1 class="notifications-text14">Filter</h1>
+    <h1 class="notifications-text15">Review</h1>
+    <h1 class="notifications-text16">Mentions</h1>
+    <h1 class="notifications-text17">Likes</h1>
+    <h1 class="notifications-text18">Purchases</h1>
+    <h1 class="notifications-text19">Messages</h1>
+  </div>
+  <h1 class="notifications-text20">Notifications</h1>
+  <div class="notifications-container6">
+    <img
+      alt="image"
+      src="/assets/Images/image%20(7)-200h.png"
+      class="notifications-image"
+    />
+    <img
+      alt="image"
+      src="/assets/Images/image%20(8)-200h.png"
+      class="notifications-image1"
+    />
+  </div>
+  <input
+    type="text"
+    placeholder="Search for a property"
+    class="notifications-textinput input"
+  />
+  <button type="button" class="notifications-button button">
+    Add Property
+  </button>
+  <div class="notifications-container7">
+    <button type="button" class="notifications-button1 button" onclick="selectAll()">
+      Select All
+    </button>
+    <button type="button" class="notifications-button2 button" onclick="unselectAll()">
+      Unselect All
+    </button>
+  </div>
+  <input type="checkbox" checked="true" class="notifications-checkbox" />
+  <input type="checkbox" checked="true" class="notifications-checkbox1" />
+  <input type="checkbox" checked="true" class="notifications-checkbox2" />
+  <input type="checkbox" checked="true" class="notifications-checkbox3" />
+  <input type="checkbox" checked="true" class="notifications-checkbox4" />
+  <input type="checkbox" checked="true" class="notifications-checkbox5" />
+  
+  <script>
+  function selectAll() {
+    var checkboxes = document.querySelectorAll('.notifications-checkbox');
+    checkboxes.forEach(function(checkbox) {
+      checkbox.checked = true;
+    });
+  }
+  
+  function unselectAll() {
+    var checkboxes = document.querySelectorAll('.notifications-checkbox');
+    checkboxes.forEach(function(checkbox) {
+      checkbox.checked = false;
+    });
+  }
+  </script>
+  <img
+    alt="image"
+    src="/assets/Images/image%20(6)-200h.png"
+    class="notifications-image2"
+  />
+</div>

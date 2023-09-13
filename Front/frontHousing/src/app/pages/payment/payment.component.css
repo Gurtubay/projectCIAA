@@ -1,0 +1,295 @@
+:host { 
+  display: contents; 
+}
+.payment-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.payment-container01 {
+  top: 176px;
+  left: 202px;
+  width: 1030px;
+  height: 442px;
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.payment-container02 {
+  top: 0px;
+  right: 0px;
+  width: 486px;
+  height: 392px;
+  margin: auto;
+  display: flex;
+  position: absolute;
+  align-self: center;
+  align-items: flex-start;
+  border-color: rgba(120, 120, 120, 0.4);
+  border-style: dashed;
+  border-width: 0px;
+  border-radius: 12px;
+  flex-direction: column;
+  background-color: #f0f0f0;
+}
+.payment-text {
+  font-size: 24px;
+  align-self: flex-start;
+  margin-top: var(--dl-space-space-unit);
+  font-family: Roboto;
+  line-height: 31px;
+  margin-left: var(--dl-space-space-unit);
+}
+.payment-select {
+  width: 150px;
+  height: 47px;
+  margin-top: var(--dl-space-space-unit);
+  line-height: 19px;
+  margin-left: var(--dl-space-space-unit);
+  border-radius: 12px;
+  background-color: #c2c2c2;
+}
+.payment-container03 {
+  flex: 0 0 auto;
+  width: 425px;
+  height: var(--dl-size-size-small);
+  display: flex;
+  padding: var(--dl-space-space-unit);
+  align-self: center;
+  margin-top: 8px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.payment-text01 {
+  color: #030303;
+  font-size: 24px;
+  align-self: center;
+  font-family: Roboto;
+  line-height: 31px;
+}
+.payment-text04 {
+  color: rgb(3, 3, 3);
+  font-size: 24px;
+  align-self: center;
+  font-family: Roboto;
+  line-height: 31px;
+}
+.payment-container04 {
+  flex: 0 0 auto;
+  width: 425px;
+  height: var(--dl-size-size-small);
+  display: flex;
+  padding: var(--dl-space-space-unit);
+  align-self: center;
+  margin-top: 8px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.payment-text07 {
+  color: rgb(3, 3, 3);
+  font-size: 24px;
+  align-self: center;
+  font-family: Roboto;
+  line-height: 31px;
+}
+.payment-text10 {
+  color: rgb(3, 3, 3);
+  font-size: 24px;
+  align-self: center;
+  font-family: Roboto;
+  line-height: 31px;
+}
+.payment-container05 {
+  flex: 0 0 auto;
+  width: 425px;
+  height: var(--dl-size-size-small);
+  display: flex;
+  padding: var(--dl-space-space-unit);
+  align-self: center;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.payment-text13 {
+  color: rgb(3, 3, 3);
+  font-size: 24px;
+  align-self: center;
+  font-style: normal;
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: 31px;
+}
+.payment-text16 {
+  color: rgb(3, 3, 3);
+  font-size: 24px;
+  align-self: center;
+  font-style: normal;
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: 31px;
+}
+.payment-container06 {
+  top: 0px;
+  left: 0px;
+  width: 486px;
+  height: 350px;
+  margin: auto;
+  display: flex;
+  position: absolute;
+  align-self: center;
+  align-items: center;
+  border-color: rgba(120, 120, 120, 0.4);
+  border-style: dashed;
+  border-width: 0px;
+  border-radius: 12px;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #f0f0f0;
+}
+.payment-text19 {
+  font-size: 24px;
+  align-self: flex-start;
+  margin-top: var(--dl-space-space-unit);
+  font-family: Roboto;
+  line-height: 31px;
+  margin-left: var(--dl-space-space-unit);
+}
+.payment-container07 {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  margin-top: var(--dl-space-space-twounits);
+  align-items: center;
+  margin-bottom: var(--dl-space-space-twounits);
+  flex-direction: column;
+  justify-content: space-between;
+}
+.payment-textinput {
+  color: var(--dl-color-gray-white);
+  width: 425px;
+  height: 58px;
+  font-size: 16px;
+  align-self: center;
+  margin-top: var(--dl-space-space-unit);
+  font-family: Roboto;
+  border-width: 0px;
+  border-radius: 12px;
+  background-color: #c2c2c2;
+}
+.payment-textinput1 {
+  color: var(--dl-color-gray-white);
+  width: 425px;
+  height: 58px;
+  font-size: 16px;
+  align-self: center;
+  margin-top: var(--dl-space-space-unit);
+  font-family: Roboto;
+  border-width: 0px;
+  border-radius: 12px;
+  background-color: #c2c2c2;
+}
+.payment-container08 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.payment-textinput2 {
+  color: var(--dl-color-gray-white);
+  width: 206px;
+  height: 58px;
+  font-size: 16px;
+  align-self: center;
+  margin-top: 0px;
+  font-family: Roboto;
+  margin-left: var(--dl-space-space-twounits);
+  border-width: 0px;
+  margin-right: var(--dl-space-space-unit);
+  border-radius: 12px;
+  background-color: #c2c2c2;
+}
+.payment-textinput3 {
+  color: var(--dl-color-gray-white);
+  width: 170px;
+  height: 58px;
+  font-size: 16px;
+  align-self: center;
+  margin-top: 0px;
+  font-family: Roboto;
+  margin-left: var(--dl-space-space-unit);
+  border-width: 0px;
+  margin-right: var(--dl-space-space-twounits);
+  border-radius: 12px;
+  background-color: #c2c2c2;
+}
+.payment-button {
+  top: 300px;
+  left: 574px;
+  color: white;
+  width: 175px;
+  border: 0;
+  height: 69px;
+  outline: none;
+  padding: 0px 8px;
+  position: absolute;
+  font-size: 14;
+  box-sizing: border-box;
+  font-family: Roboto;
+  line-height: 16px;
+  border-radius: 12px;
+  background-color: var(--dl-color-gray-black);
+}
+.payment-button1 {
+  top: 300px;
+  color: black;
+  right: 46px;
+  width: 175px;
+  border: 0;
+  height: 69px;
+  outline: none;
+  padding: 0px 8px;
+  position: absolute;
+  font-size: 14;
+  box-sizing: border-box;
+  font-family: Roboto;
+  line-height: 16px;
+  border-radius: 12px;
+  background-color: var(--dl-color-gray-white);
+}
+.payment-container09 {
+  flex: 0 0 auto;
+  width: 100%;
+  border: 0;
+  height: 100px;
+  display: flex;
+  padding: var(--dl-space-space-twounits);
+  align-self: flex-start;
+  align-items: flex-start;
+}
+.payment-navlink {
+  display: contents;
+}
+.payment-icon {
+  width: 24px;
+  height: 24px;
+  text-decoration: none;
+}
+.payment-text26 {
+  font-size: 32px;
+  font-style: normal;
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: 38px;
+  margin-left: var(--dl-space-space-twounits);
+}
+.divider-horizontal {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
