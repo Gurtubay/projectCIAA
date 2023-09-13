@@ -44,6 +44,7 @@ namespace Concentracion_Reto
             );
             services.AddScoped<UsuarioController>();
             services.AddScoped<AuthController>();
+            services.AddScoped<PropiedadController>();
 
         }
 

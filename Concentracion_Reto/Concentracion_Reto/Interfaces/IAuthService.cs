@@ -5,6 +5,6 @@ namespace Concentracion_Reto.Interfaces
 {
     public interface IAuthService
     {
-        Task<bool> AuthenticateUser(string usuario, string contrasena);
+        Task<UserAuthDTO> AuthenticateUser(string usuario, string contrasena);
     }
 }

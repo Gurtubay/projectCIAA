@@ -4,5 +4,5 @@ export interface AutorizacionRequest{
 }
 export interface AutorizacionResponse{
     usuario:string,
-    error:string
+    Error:string
 }

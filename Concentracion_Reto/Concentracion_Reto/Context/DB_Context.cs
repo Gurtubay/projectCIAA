@@ -43,7 +43,7 @@ namespace Concentracion_Reto.Context
     public class Propiedad
     {
         [Key]
-        public int? propiedadId { get; set; }
+        public int propiedadId { get; set; }
         public int usuarioId { get; set; }
         public string titulo { get; set; }
         public string descripcion { get; set; }

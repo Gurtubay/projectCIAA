@@ -44,6 +44,7 @@ builder.Services.AddCors();
 
 builder.Services.AddScoped<InterfaceUsuario, ServicioUsuario>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<InterfacePropiedad, ServicioPropiedad>();
 var app = builder.Build();
 
 

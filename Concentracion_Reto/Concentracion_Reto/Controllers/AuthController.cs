@@ -20,11 +20,25 @@ public class AuthController : ControllerBase
         var usuario = model.Usuario;
         var contrasena = model.Contrasena;
 
-        var isAuthenticated = await _authService.AuthenticateUser(usuario, contrasena);
-
-        if (isAuthenticated)
+        var resp = new UserAuthDTO();
+        try
         {
-            return new LoginModelResponse { Usuario = usuario };
+            resp = await _authService.AuthenticateUser(usuario, contrasena);
+        }
+        catch (Exception ex) // catches all exceptions
+        {
+            // Log or handle the exception here. This is just a basic example:
+            Console.WriteLine($"An error occurred: {ex.Message}");
+            resp = new UserAuthDTO
+            {
+                IsAuthenticated = false,
+                UserId = 0
+            };
+        }
+
+        if (resp.IsAuthenticated)
+        {
+            return new LoginModelResponse { Usuario = usuario, Folio = (int)resp.UserId };
         }
 
         return new LoginModelResponse { Error="Credenciales invalidas"}; // Cambia esto según tus necesidades

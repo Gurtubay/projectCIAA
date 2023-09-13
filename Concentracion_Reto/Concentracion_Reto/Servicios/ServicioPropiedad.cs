@@ -24,14 +24,13 @@ namespace Concentracion_Reto.Servicios
 
         public async Task<Propiedad> Create(dtoPropiedad propiedad)
         {
-            var nuevaPropiedad = new Propiedad
-            {
-                usuarioId = propiedad.usuarioId,
-                titulo = propiedad.titulo,
-                descripcion = propiedad.descripcion,
-                precio = propiedad.precio,
-                ubicacion = propiedad.ubicacion
-            };
+            var nuevaPropiedad = new Propiedad();
+            /*nuevoCliente.id = cliente.id;*/
+            nuevaPropiedad.usuarioId = propiedad.usuarioId;
+            nuevaPropiedad.titulo = propiedad.titulo;
+            nuevaPropiedad.descripcion = propiedad.descripcion;
+            nuevaPropiedad.precio = propiedad.precio;
+            nuevaPropiedad.ubicacion = propiedad.ubicacion;
 
             contexto.Add(nuevaPropiedad);
             await contexto.SaveChangesAsync();
@@ -46,7 +45,6 @@ namespace Concentracion_Reto.Servicios
                 throw new Exception("Propiedad no encontrada");
             }
 
-            propiedadExistente.usuarioId = propiedad.usuarioId;
             propiedadExistente.titulo = propiedad.titulo;
             propiedadExistente.descripcion = propiedad.descripcion;
             propiedadExistente.precio = propiedad.precio;

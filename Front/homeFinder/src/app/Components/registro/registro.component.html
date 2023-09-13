@@ -1,4 +1,54 @@
-<mat-card>
+<body class="body">
+  <mat-card class="registrar-container">
+    <mat-card-header>
+      <mat-card-title class="registrar-text">Registro</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="registrar()" class="registrar-container1">
+
+        <mat-form-field appearance="outline" >
+          <mat-label class="registrar-text06">Usuario</mat-label>
+          <input matInput formControlName="usuario" type="text" placeholder="Usuario">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label class="registrar-text04">Contraseña</mat-label>
+          <input matInput formControlName="password" type="password" placeholder="Contraseña">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" >
+          <mat-label class="registrar-text01">Nombres</mat-label>
+          <input matInput formControlName="nombres" type="text" placeholder="Nombres">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" >
+          <mat-label class="registrar-text05">Apellidos</mat-label>
+          <input matInput formControlName="apellidos" type="text" placeholder="Apellidos">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" >
+          <mat-label class="registrar-text02">Correo</mat-label>
+          <input matInput formControlName="correo" type="email" placeholder="Correo Electrónico">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" >
+          <mat-label class="registrar-text03">Teléfono</mat-label>
+          <input matInput formControlName="telefono" type="text" placeholder="Teléfono">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid || loading" class="registrar-navlink button">Registrar</button>
+
+      </form>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <mat-spinner *ngIf="loading" diameter="30"></mat-spinner>
+    </mat-card-actions>
+  </mat-card>
+</body>
+
+<!-- <mat-card>
     <mat-card-header>
       <mat-card-title>Registro</mat-card-title>
     </mat-card-header>
@@ -9,37 +59,32 @@
         <mat-form-field appearance="outline">
           <mat-label>Usuario</mat-label>
           <input matInput formControlName="usuario" type="text" placeholder="Usuario">
-          <!-- <mat-error *ngIf="form.controls.usuario.hasError('required')">El usuario es requerido</mat-error> -->
         </mat-form-field>
   
         <mat-form-field appearance="outline">
           <mat-label>Contraseña</mat-label>
           <input matInput formControlName="password" type="password" placeholder="Contraseña">
-          <!-- <mat-error *ngIf="form.controls.password.hasError('required')">La contraseña es requerida</mat-error> -->
         </mat-form-field>
   
         <mat-form-field appearance="outline">
           <mat-label>Nombres</mat-label>
           <input matInput formControlName="nombres" type="text" placeholder="Nombres">
-          <!-- <mat-error *ngIf="form.controls.nombres.hasError('required')">Los nombres son requeridos</mat-error> -->
         </mat-form-field>
   
         <mat-form-field appearance="outline">
           <mat-label>Apellidos</mat-label>
           <input matInput formControlName="apellidos" type="text" placeholder="Apellidos">
-          <!-- <mat-error *ngIf="form.controls.apellidos.hasError('required')">Los apellidos son requeridos</mat-error> -->
         </mat-form-field>
   
         <mat-form-field appearance="outline">
           <mat-label>Correo</mat-label>
           <input matInput formControlName="correo" type="email" placeholder="Correo Electrónico">
-          <!-- <mat-error *ngIf="form.controls.correo.hasError('required')">El correo es requerido</mat-error> -->
         </mat-form-field>
   
         <mat-form-field appearance="outline">
           <mat-label>Teléfono</mat-label>
           <input matInput formControlName="telefono" type="text" placeholder="Teléfono">
-          <!-- <mat-error *ngIf="form.controls.telefono.hasError('required')">El teléfono es requerido</mat-error> -->
+          <mat-error *ngIf="form.controls.telefono.hasError('required')">El teléfono es requerido</mat-error>
         </mat-form-field>
   
         <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid || loading">Registrar</button>
@@ -51,4 +96,4 @@
       <mat-spinner *ngIf="loading" diameter="30"></mat-spinner>
     </mat-card-actions>
   </mat-card>
-  
+   -->

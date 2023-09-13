@@ -13,19 +13,23 @@ public class AuthService : IAuthService
         _context = context;
     }
 
-    public async Task<bool> AuthenticateUser(string usuario, string contrasena)
+    public async Task<UserAuthDTO> AuthenticateUser(string usuario, string contrasena)
     {
         var cliente = await _context.Usuarios.FirstOrDefaultAsync(c => c.usuario == usuario);
 
-        if (cliente == null)
+        var authResult = new UserAuthDTO
         {
-            return false; // Usuario no encontrado
+            IsAuthenticated = false,
+            UserId = null
+        };
+
+        if (cliente != null && cliente.contrasena == contrasena)
+        {
+            authResult.IsAuthenticated = true;
+            authResult.UserId = cliente.usuarioId;
         }
+        
 
-        // Aquí puedes implementar la lógica de validación de contraseña
-        // Puedes utilizar librerías de encriptación o comparar las contraseñas en texto plano
-
-        // Ejemplo de validación básica de contraseña en texto plano
-        return cliente.contrasena == contrasena;
+        return authResult;
     }
 }

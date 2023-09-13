@@ -1,0 +1,154 @@
+:host { 
+    display: contents; 
+
+  }
+  .registrar-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .registrar-text {
+    top: 45px;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    font-size: 3em;
+    margin-top: auto;
+    text-align: center;
+    font-family: Roboto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .registrar-container1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top: 100px;
+    left: 0px;
+    right: 0px;
+    width: 400px;
+    border: 0;
+    height: 509px;
+    position: absolute;
+    margin-top: var(--dl-space-space-unit);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+    margin-bottom: auto;
+    background-color: #f0f0f0;
+  }
+  .registrar-textinput {
+    top: 110px;
+    left: 68px;
+    color: #191c1f;
+    width: 265px;
+    height: 40px;
+    margin: auto;
+    position: absolute;
+    font-size: 16px;
+    font-family: Roboto;
+    line-height: 20px;
+    border-width: 0.1px;
+    background-color: rgba(230,230,230,0.55);
+  }
+  .registrar-textinput1 {
+    top: 256px;
+    left: 69px;
+    color: #191c1f;
+    width: 265px;
+    height: 40px;
+    margin: auto;
+    position: absolute;
+    font-size: 16px;
+    font-family: Roboto;
+    line-height: 20px;
+    border-width: 0.1px;
+    background-color: rgba(230,230,230,0.55);
+  }
+  .registrar-textinput2 {
+    top: 180px;
+    left: 68px;
+    color: #191c1f;
+    width: 265px;
+    height: 40px;
+    margin: auto;
+    position: absolute;
+    font-size: 16px;
+    font-family: Roboto;
+    line-height: 20px;
+    border-width: 0.1px;
+    background-color: rgba(230,230,230,0.55);
+  }
+  .registrar-textinput3 {
+    top: 326px;
+    left: 69px;
+    color: #191c1f;
+    width: 265px;
+    height: 40px;
+    margin: auto;
+    position: absolute;
+    font-size: 16px;
+    font-family: Roboto;
+    line-height: 20px;
+    border-width: 0.1px;
+    background-color: rgba(230,230,230,0.55);
+  }
+  .registrar-textinput4 {
+    top: 391px;
+    left: 69px;
+    color: #191c1f;
+    width: 265px;
+    height: 40px;
+    margin: auto;
+    position: absolute;
+    font-size: 16px;
+    font-family: Roboto;
+    line-height: 20px;
+    border-width: 0.1px;
+    background-color: rgba(230,230,230,0.55);
+  }
+  .registrar-textinput5 {
+    top: 40px;
+    left: 68px;
+    color: #191c1f;
+    width: 265px;
+    height: 40px;
+    margin: auto;
+    position: absolute;
+    font-size: 16px;
+    font-family: Roboto;
+    line-height: 20px;
+    border-width: 0.1px;
+    background-color: rgba(230,230,230,0.55);
+  }
+  .registrar-navlink {
+    left: 0px;
+    color: rgb(255, 255, 255);
+    right: 0px;
+    width: var(--dl-size-size-medium);
+    border: 0;
+    bottom: 0px;
+    height: var(--dl-size-size-small);
+    padding: 0px 8px;
+    position: absolute;
+    font-size: 12px;
+    box-sizing: border-box;
+    font-style: normal;
+    margin-top: auto;
+    font-weight: 600;
+    line-height: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+    margin-bottom: var(--dl-space-space-unit);
+    padding-bottom: 0px 8px;
+    text-decoration: none;
+    background-color: black;
+  }
+  
+    

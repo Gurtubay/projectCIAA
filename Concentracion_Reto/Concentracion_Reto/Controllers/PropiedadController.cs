@@ -20,16 +20,23 @@ namespace Concentracion_Reto.Controllers
         }
 
         [HttpPost]
-        public async Task<RegisterModelResponse> CrearPropiedad(dtoPropiedad propiedad)
+        public async Task<CreatePropiedadResponse> CrearPropiedad(CreatePropiedadRequest propiedad)
         {
+            var nuevoPropiedad = new dtoPropiedad();
+            nuevoPropiedad.usuarioId = propiedad.usuarioId;
+            nuevoPropiedad.titulo = propiedad.titulo;
+            nuevoPropiedad.descripcion = propiedad.descripcion;
+            nuevoPropiedad.precio = propiedad.precio;
+            nuevoPropiedad.ubicacion = propiedad.ubicacion;
+
             try
             {
-                var nuevaPropiedad = await _propiedadService.Create(propiedad);
-                return new RegisterModelResponse { Message = "Exito" };
+                var nuevoUser = await _propiedadService.Create(nuevoPropiedad);
+                return new CreatePropiedadResponse { Message = "Exito" };
             }
             catch (Exception ex)
             {
-                return new RegisterModelResponse { Message = ex.ToString() };
+                return new CreatePropiedadResponse { Message = ex.ToString() };
             }
         }
 
