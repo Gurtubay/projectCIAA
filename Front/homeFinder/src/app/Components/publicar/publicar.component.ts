@@ -96,7 +96,7 @@ export class PublicarComponent implements OnInit {
           if(response!=null){
             console.log(response)
             if(response.message=="Exito"){
-              this.router.navigate(['login'])
+              console.log("BD exito")
             }
             else{
               console.log("Ha ocurrido un error")
