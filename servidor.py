@@ -1,6 +1,7 @@
 from flask import Flask, render_template,request,jsonify
 import numpy as np
 from joblib import load
+from flask_cors import CORS
 import os
 
 #Cargar el modelo
@@ -8,6 +9,7 @@ dt=load('dt1.joblib')
 
 #Generar el servidor(Back-End)
 servidorWeb=Flask(__name__)
+CORS(servidorWeb)
 
 @servidorWeb.route("/holamundo",methods=['GET'])
 def formulario():
