@@ -11,6 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { ModeloRequest } from 'src/app/dtos/ModeloDTO';
+import { Modelo } from 'src/app/Service/Modelo.service';
 
 @Component({
   selector: 'app-publicar',
@@ -20,7 +22,7 @@ import { MatInputModule } from '@angular/material/input';
 export class PublicarComponent implements OnInit {
   form: FormGroup;
   loading: boolean;
-    constructor(public dialog: MatDialog, private fb: FormBuilder, private router: Router, private registro:Publicar){ 
+    constructor(public dialog: MatDialog, private fb: FormBuilder, private router: Router, private registro:Publicar, private modelo:Modelo){ 
       this.form = this.fb.group({
         titulo: ['', Validators.required],
         descripcion: ['', Validators.required],
@@ -63,7 +65,29 @@ export class PublicarComponent implements OnInit {
         ubicacion: this.form.value.ubicacion,
 
       }
-      
+      const datosModelo: ModeloRequest = {
+        TipoVivienda: this.form.value.tipoVivienda,
+        CalleConectadaEnPies: this.form.value.calleConectadaEnPies,
+        AreaLote: this.form.value.areaLote,
+        CalidadMateriales: this.form.value.calidadMateriales,
+        CondicionCasa: this.form.value.condicionCasa,
+        AñoConstruccion: this.form.value.añoConstruccion,
+        AñoRemodelado: this.form.value.añoRemodelado,
+        AreaRevestimiento: this.form.value.areaRevestimiento,
+        AreaSotano1: this.form.value.areaSotano1,
+        AreaSotano2: this.form.value.areaSotano2,
+        AreaSotanoSinTerminar: this.form.value.areaSotanoSinTerminar,
+        AreaSotanoTotal: this.form.value.areaSotanoTotal,
+        AreaPrimerPiso: this.form.value.areaPrimerPiso,
+        AreaSegundoPiso: this.form.value.areaSegundoPiso,
+        AreaTerminadaBajaCalidad: this.form.value.areaTerminadaBajaCalidad,
+        AreaViviendaSobreSuelo: this.form.value.areaViviendaSobreSuelo,
+        BañosCompletosSotano: this.form.value.bañosCompletosSotano,
+        BañosMediosSotano: this.form.value.bañosMediosSotano,
+        BañosCompletosSobreSuelo: this.form.value.bañosCompletosSobreSuelo,
+        BañosMediosSobreSuelo: this.form.value.bañosMediosSobreSuelo
+    };
+    
       debugger
       this.registro.createProperty(datosUser)
       .subscribe({
@@ -73,6 +97,29 @@ export class PublicarComponent implements OnInit {
             console.log(response)
             if(response.message=="Exito"){
               this.router.navigate(['login'])
+            }
+            else{
+              console.log("Ha ocurrido un error")
+            }
+          }
+          else{
+            console.log('Respuesta null')
+          }
+        },
+        error:(error)=>{
+          console.log(error);
+        }
+
+      })
+
+      this.modelo.runModel(datosModelo)
+      .subscribe({
+        
+        next:(response)=>{
+          if(response!=null){
+            console.log(response)
+            if(response.resultado!=null){
+              console.log(response.resultado)
             }
             else{
               console.log("Ha ocurrido un error")
