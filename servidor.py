@@ -28,7 +28,7 @@ def modeloForm():
 	# 	contenido['alcohol']
 	# ])
     contenido=request.json
-	print(contenido)
+    print(contenido)
     datosEntrada = np.array([
         (contenido['TipoVivienda']-56.897)/(42.300),
         (contenido['CalleConectadaEnPies']-57.623)/(34.6643),
