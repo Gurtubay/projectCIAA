@@ -24,11 +24,15 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { DatePipe } from '@angular/common';
 import { RouterModule } from '@angular/router'; // Importa RouterModule
 import { MatCardModule } from '@angular/material/card';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { MatSelectModule } from '@angular/material/select';
 
 
 
 @NgModule({
   declarations: [
+  
+    ConfirmDialogComponent
   ],
   imports: [
     CommonModule,
@@ -52,7 +56,8 @@ import { MatCardModule } from '@angular/material/card';
     MatListModule,
     BrowserModule,
     RouterModule,
-    MatCardModule
+    MatCardModule,
+    MatSelectModule
   ],
   exports: [
     CommonModule,
@@ -76,7 +81,8 @@ import { MatCardModule } from '@angular/material/card';
     MatListModule,
     BrowserModule,
     RouterModule,
-    MatCardModule
+    MatCardModule,
+    MatSelectModule
   ]
 })
 export class SharedModule { }

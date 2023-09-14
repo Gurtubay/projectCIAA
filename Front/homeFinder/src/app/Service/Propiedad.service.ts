@@ -2,9 +2,9 @@ import {Injectable} from "@angular/core";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import { enviroment } from '../env/enviroment';
 
-import {map} from "rxjs/operators";
-import {Observable} from "rxjs";
-import { CreatePropiedadRequest, CreatePropiedadResponse } from "../dtos/PropiedadDTO";
+import {catchError, map} from "rxjs/operators";
+import {Observable, throwError} from "rxjs";
+import { CreatePropiedadRequest, CreatePropiedadResponse, Propiedad } from "../dtos/PropiedadDTO";
 
 @Injectable()
 export class Publicar{
@@ -24,5 +24,15 @@ export class Publicar{
             debugger;
             return res;
         }));
+    }
+
+    public getPropertyList():Observable<Propiedad[]>{
+        return this.http.get<Propiedad[]>(`${this.URL}${enviroment.publicarAPI}`).pipe(
+            catchError(error=>{
+                console.error(error);
+                return throwError('Something went wrong. Please try again later.'); 
+            })
+
+        )
     }
 }

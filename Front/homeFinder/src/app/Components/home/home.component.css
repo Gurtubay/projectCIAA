@@ -1,0 +1,67 @@
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gainsboro;
+    width: 100vw;
+    height: 500vh;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.nuevo{
+    align-self: flex-end;
+}
+.nuevo button {
+    background-color: blue; /* Color de fondo azul */
+    color: white; /* Color de letra blanco */
+    border: none; /* Eliminar cualquier borde por defecto */
+    border-radius: 8px; /* Esquinas redondeadas */
+    padding: 10px 20px; /* Espaciado interno para que el botón sea más grande */
+    cursor: pointer; /* Cambiar el cursor a mano al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave al cambiar de color */
+}
+
+/* Opcional: Cambiar el color del fondo al pasar el ratón por encima para una mejor interactividad */
+.nuevo button:hover {
+    background-color: darkblue;
+}
+.lista{
+    width: 20%;
+    height: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.imagen{
+    display: flex;
+    justify-content: center;
+}
+.imagen img{
+    width: 60%;
+}
+.propiedad-bloque {
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 90%;
+    background-color: bisque;
+    padding: 5px;
+    margin: 10%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px; /* Esquinas redondeadas */
+
+
+}
+  

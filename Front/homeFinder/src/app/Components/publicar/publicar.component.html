@@ -1,7 +1,7 @@
 <body class="body">
     <mat-card class="registrar-container">
       <mat-card-header>
-        <mat-card-title class="registrar-text">Registro</mat-card-title>
+        <mat-card-title class="registrar-text">Publicacion</mat-card-title>
       </mat-card-header>
   
       <mat-card-content>
@@ -20,12 +20,6 @@
             <input matInput formControlName="descripcion" type="text" placeholder="Descripción">
           </mat-form-field>
   
-          <!-- Precio -->
-          <mat-form-field appearance="outline">
-            <mat-label>Precio</mat-label>
-            <input matInput formControlName="precio" type="text" placeholder="Precio">
-          </mat-form-field>
-  
           <!-- Ubicación -->
           <mat-form-field appearance="outline">
             <mat-label>Ubicación</mat-label>
@@ -33,10 +27,28 @@
           </mat-form-field>
 
           <!-- Tipo Vivienda -->
-        <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline">
             <mat-label>Tipo Vivienda</mat-label>
-            <input matInput formControlName="tipoVivienda" type="number" placeholder="20-190">
+            <mat-select formControlName="tipoVivienda">
+                <mat-option value="20">1-STORY 1946 & NEWER ALL STYLES</mat-option>
+                <mat-option value="30">1-STORY 1945 & OLDER</mat-option>
+                <mat-option value="40">1-STORY W/FINISHED ATTIC ALL AGES</mat-option>
+                <mat-option value="45">1-1/2 STORY-UNFINISHED ALL AGES</mat-option>
+                <mat-option value="50">1-1/2 STORY FINISHED ALL AGES</mat-option>
+                <mat-option value="60">2-STORY 1946 & NEWER ALL STYLES</mat-option>
+                <mat-option value="70">2-STORY 1945 & OLDER</mat-option>
+                <mat-option value="75">2-1/2STORY ALL AGES</mat-option>
+                <mat-option value="80">SPLIT OR MULTI-LEVEL</mat-option>
+                <mat-option value="85">SPLIT FOYER</mat-option>
+                <mat-option value="90">DUPLEX - ALL STYLES AND AGES</mat-option>
+                <mat-option value="120">1-STORY PUD (PLANNED UNIT DEVELOPMENT) - 1946 & NEWER</mat-option>
+                <mat-option value="150">1-1/2 STORY PUD - ALL AGES</mat-option>
+                <mat-option value="160">2-STORY PUD - 1946 & NEWER</mat-option>
+                <mat-option value="180">PUD - MULTILEVEL -INCL SPLIT LEV/FOYER</mat-option>
+                <mat-option value="190">2 FAMILY CONVERSION - ALL STYLES AND AGES</mat-option>
+            </mat-select>
           </mat-form-field>
+
   
           <!-- Calle Conectada En Pies -->
           <mat-form-field appearance="outline">

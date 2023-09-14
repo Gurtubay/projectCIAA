@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
             console.log(response)
             console.log(response.usuario)
             if(response.usuario!=null){
-              this.router.navigate(['publicar']);
+              this.router.navigate(['home']);
             }
             else{
               console.log("Credenciales no validas")

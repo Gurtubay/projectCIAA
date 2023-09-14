@@ -1,1 +1,24 @@
-<p>home works!</p>
+<div class="body">
+    <div class="header">
+        <h1>HOME FINDER</h1>
+    </div>
+    <div class="nuevo">
+        <button (click)="anadirNuevo()">Añadir Nuevo</button>
+    </div>
+    <div class="main">
+        <div *ngFor="let propiedad of propiedades" class="lista">
+            
+            <div class="propiedad-bloque">
+                <div class="imagen">
+                    <img src="../../../assets/img/casa.jpg" alt="Casa Img">
+                </div>
+                <h2>{{ propiedad.titulo }}</h2>
+                <p>{{ propiedad.descripcion }}</p>
+                <strong>Precio: </strong>{{ propiedad.precio }}<br>
+                <strong>Ubicación: </strong>{{ propiedad.ubicacion }}
+            </div>
+        </div>       
+    </div>
+</div>
+
+  

@@ -1,18 +1,17 @@
 <div class="login-container">
-    <div class="login-hero">
+    <div class="left">
       <div class="login-container1">
-        <img alt="image" src="/image%20(4)-500h.png" class="login-image" />
-        <span class="login-text">Welcome to HomeFinder!</span>
-        <span class="login-text1">Discover properties for sale near you</span>
+        <img alt="image" style="width: 100%;" src="../../../assets/img/home.jpeg" class="login-image" />
+        <span class="login-text1"><strong>Discover properties for sale near you</strong></span>
       </div>
     </div>
-    <div class="login-form-container">
+    <div class="right">
       <div class="login-container2">
         <mat-card class="login-form-container">
             <mat-card-header>
               <mat-card-title class="login-text">Login</mat-card-title>
             </mat-card-header>
-        
+
             <mat-card-content>
               <form [formGroup]="form" (ngSubmit)="ingresar()" class="login-container1">
         
@@ -27,7 +26,7 @@
                 </mat-form-field>
         
                 <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid || loading" class="registrar-navlink button">Ingresar</button>
-                <a routerLink="/registrar" class="login-navlink1">
+                <a routerLink="/registro" class="login-navlink1">
                     No tienes Cuenta?
                   </a>
               </form>
