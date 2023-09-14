@@ -19,14 +19,15 @@ def formulario():
 @servidorWeb.route('/modeloForm',methods=['POST'])
 def modeloForm():
 	#Procesar los datos de entrada
-	# contenido =request.json
-    contenido=request.form
+	#contenido =request.json
+    #contenido=request.form
 	# print(contenido)
 	# datosEntrada=np.array([0.88,0,2.6,0.098,25,67,0.9968,1,0.4,
 	# 	contenido['pH'],
 	# 	contenido['sulphates'],
 	# 	contenido['alcohol']
 	# ])
+    contenido=request.json
     datosEntrada = np.array([
         (contenido['TipoVivienda']-56.897)/(42.300),
         (contenido['CalleConectadaEnPies']-57.623)/(34.6643),
