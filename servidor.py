@@ -9,7 +9,7 @@ dt=load('dt1.joblib')
 
 #Generar el servidor(Back-End)
 servidorWeb=Flask(__name__)
-CORS(servidorWeb)
+CORS(servidorWeb, resources={r"/*": {"origins": "http://localhost:4200"}})
 
 @servidorWeb.route("/holamundo",methods=['GET'])
 def formulario():
