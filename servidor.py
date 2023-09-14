@@ -53,7 +53,7 @@ def modeloForm():
 	])
 	
 	#utilizar el modelo
-    # resultado = dt.predict(datosEntrada.reshape(1,-1))
+    resultado = dt.predict(datosEntrada.reshape(1,-1))
     # return jsonify({'resultado':str((resultado[0]*79442.5028)+180921.19589)})
     return jsonify({'resultado':'hola'})
 
