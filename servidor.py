@@ -28,6 +28,7 @@ def modeloForm():
 	# 	contenido['alcohol']
 	# ])
     contenido=request.json
+	print(contenido)
     datosEntrada = np.array([
         (contenido['TipoVivienda']-56.897)/(42.300),
         (contenido['CalleConectadaEnPies']-57.623)/(34.6643),
@@ -52,9 +53,9 @@ def modeloForm():
 	])
 	
 	#utilizar el modelo
-    resultado = dt.predict(datosEntrada.reshape(1,-1))
-    return jsonify({'resultado':str((resultado[0]*79442.5028)+180921.19589)})
-
+    # resultado = dt.predict(datosEntrada.reshape(1,-1))
+    # return jsonify({'resultado':str((resultado[0]*79442.5028)+180921.19589)})
+    return jsonify({'resultado':'hola'})
 
 if __name__ == '__main__':
 	servidorWeb.run(debug=False,host='0.0.0.0',port='8080')
