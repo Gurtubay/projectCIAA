@@ -5,7 +5,7 @@ from flask_cors import CORS
 import os
 
 #Cargar el modelo
-dt=load('dt1.joblib')
+dt=load('modeloNN4.joblib')
 
 #Generar el servidor(Back-End)
 servidorWeb=Flask(__name__)
