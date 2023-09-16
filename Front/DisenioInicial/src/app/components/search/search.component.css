@@ -1,0 +1,26 @@
+:host { 
+  display: contents; 
+}
+.search-search {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+.search-icon {
+  width: 24px;
+  height: 24px;
+}
+.search-textinput {
+  width: 482px;
+  height: 44px;
+  padding: 0px 8px;
+  font-size: 14px;
+  box-shadow: 2px 2px 4px rgba(255,255,255,0.1);
+  box-sizing: border-box;
+  font-family: Roboto;
+  border-width: 0px;
+  border-radius: 12px;
+  background-color: rgba(230,230,230,0.55);
+}
+
